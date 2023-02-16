@@ -8,6 +8,9 @@ const port = process.env.PORT;
 const debug = createDebugMessage("app");
 
 const app = express();
+
+app.use(morgan("dev"));
+
 app.use((req, res, next) => {
   console.log("Gholadsa");
   debug("app");
@@ -18,8 +21,5 @@ app.get("/things", (req, res) => {
   console.log("a request to / has been received");
   res.json(thingsThatiKnow);
 });
-
-app.use(morgan("dev"));
-debug("app");
 
 app.listen(port);

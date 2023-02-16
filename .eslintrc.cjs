@@ -6,6 +6,7 @@ module.exports = {
   extends: ["xo", "prettier"],
   overrides: [
     {
+      rules: { "no-implicit-coercion": "off" },
       extends: ["xo-typescript", "prettier"],
       files: ["*.ts", "*.tsx"],
     },

@@ -8,7 +8,6 @@ const thingsThatiKnow: ThingsThatiKnowStructure = [
     name: "KISS",
     description: "KISS stands for Keep It Simple Stupid",
   },
-
   {
     id: "2",
     name: "Elmetodo",
