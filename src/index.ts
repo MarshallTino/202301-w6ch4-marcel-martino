@@ -3,6 +3,8 @@ import morgan from "morgan";
 import express from "express";
 import createDebugMessage from "debug";
 import thingsThatiKnow from "./things.js";
+import { getThing } from "./controllers/thingsController.js";
+import thingsRouter from "./router/thingsThatiKnowRouter.js";
 
 const port = process.env.PORT;
 const debug = createDebugMessage("app");
@@ -17,9 +19,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get("/things", (req, res) => {
-  console.log("a request to / has been received");
-  res.json(thingsThatiKnow);
-});
+app.use("/things", thingsRouter);
 
 app.listen(port);

@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx tsc && node dist/"
+    "start": "node dist",
+    "start:dev": "node --watch dist",
+    "build": "tsc",
+    "build:dev": "tsc --watch",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
